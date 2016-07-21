@@ -113,7 +113,7 @@ class ServiceRestProxy extends RestProxy
         $uri = $this->_psrUri;
         if ($path != NULL)
         {
-            $uri = $uri->withPath($path);
+            $uri = $uri->withPath($uri->getPath() . $path);
         }
         
         if ($queryParams != NULL)
